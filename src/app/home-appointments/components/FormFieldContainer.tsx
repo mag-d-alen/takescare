@@ -10,12 +10,10 @@ export const FormFieldContainer: React.FC<FormFieldContainerProps> = ({
   fieldId,
   children,
 }) => (
-  // <div className='space-y-3 w-full mb-6 scroll-mt-32 '>
-
-  <div className='space-y-3 w-full mb-6 scroll-mt-32 '>
+  <div className='space-y-3 w-full mb-6'>
     <FormLabel className='px-2 font-bold'>{label}</FormLabel>
-    <FormItem>
-      <FormControl id={fieldId}>{children}</FormControl>
+    <FormItem id={fieldId} className='scroll-mt-32'>
+      <FormControl>{children}</FormControl>
     </FormItem>
   </div>
 );

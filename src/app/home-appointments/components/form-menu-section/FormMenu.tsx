@@ -19,19 +19,19 @@ export const FormMenu: React.FC<FormMenuProps> = ({ numberOfPatients }) => {
       <Sidebar
         variant='inset'
         side='right'
-        className=' shadow-none mt-32 mr-24 scroll-mt-32 border-none '>
+        className=' shadow-none mt-32 mr-24 -scroll-mt-40 border-none '>
         <SidebarContent className=' bg-base-white rounded-lg p-6'>
-          <CustomCollapsible title='Przejdź do'>
+          <CustomCollapsible
+            title='Przejdź do'
+            className='text-primary-textIcon-dark'
+            onClick={() => window.scrollTo(0, 0)}>
             <Separator />
             <CustomCollapsible title='Wizyta'>
-              <Separator />
               {mockAppointmentField.appointment.map((item) => (
                 <SidebarMenuItem
                   key={item.label}
-                  className='scroll-mt-32 list-none marker:none'>
-                  <Link href={`#${item.key}`} className=''>
-                    {item.label}
-                  </Link>
+                  className='list-none marker:none -scroll-mt-40'>
+                  <Link className='ml-4' href={`#${item.key}`}>{item.label}</Link>
                 </SidebarMenuItem>
               ))}
             </CustomCollapsible>

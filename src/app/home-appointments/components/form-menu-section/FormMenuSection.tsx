@@ -14,16 +14,17 @@ export const FormMenuSection = ({ patientIndex }: { patientIndex: number }) => {
             item.label !== 'Dane adresowe do wizyty' &&
             item.label !== 'Dane adresowe'
         )
-      : mockAppointmentField.patient;
+      : mockAppointmentField.patient.filter(
+          (item) => item.label !== 'Dane adresowe'
+        );
   return (
     <CustomCollapsible
       title={`Pacjent ${convertToRomanNumerals(patientIndex)}`}>
-      <Separator />
       {linkButtons.map((item) => (
         <SidebarMenuItem
           key={item.label}
-          className='scroll-mt-40 list-none marker:none'>
-          <Link href={`#${patientIndex}.${item.key}`} className='font-medium'>
+          className='list-none marker:none -scroll-mt-40'>
+          <Link href={`#${patientIndex}.${item.key}`} className='m-4'>
             {item.label}
           </Link>
         </SidebarMenuItem>

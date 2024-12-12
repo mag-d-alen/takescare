@@ -25,7 +25,7 @@ module.exports = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
-          textIcon: { default: '#0068FA', light: '#2E85FF' },
+          textIcon: { default: '#0068FA', light: '#2E85FF', dark: '#003E94' },
           background: { subtle: '#E5F0FF', default: '#0068FA' },
         },
         secondary: {
