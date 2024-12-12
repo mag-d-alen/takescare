@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { mockAppointmentField } from '@/mocks/mockAppointmentFields';
 import { convertToRomanNumerals } from '@/lib/utils';
 import { CustomCollapsible } from '@/components/CustomCollapsible';
-import { Separator } from '@/components/ui/separator';
 import { SidebarMenuItem } from '@/components/ui/sidebar';
 
 export const FormMenuSection = ({ patientIndex }: { patientIndex: number }) => {
