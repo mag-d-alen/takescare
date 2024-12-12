@@ -26,7 +26,7 @@ const data = {
   navMain: [
     {
       title: 'Strona główna',
-      url: '/home',
+      url: '/',
       icon: <Home />,
     },
     {
